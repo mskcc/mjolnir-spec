@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential libpq-dev python3.8 python3-pip python3-setuptools python3-dev python3.11-venv
 RUN apt-get install wget tar
 ENV PYTHONPATH "${PYTHONPATH}:/app"
+RUN mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
 
 # Install samtools
 
@@ -58,5 +59,4 @@ RUN install2.r \
 
 # Install python packages
 
-
-
+RUN pip3 install ipython numpy scipy pandas
