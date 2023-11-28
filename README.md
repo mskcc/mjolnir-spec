@@ -1,6 +1,9 @@
 # mjolnir-spec
 Specification for the CI utility container
 
+## Container Build Instructions
+https://app.gitbook.com/o/-MMbSWFxDhC538nrKssf/s/-MMbS_59JoLaOrKG_T7F/deployment/building-production-containers-images
+
 ## Program/Application List:
 
 Unless otherwise specified use latest convenient version
