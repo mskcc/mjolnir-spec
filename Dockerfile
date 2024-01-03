@@ -3,10 +3,10 @@ FROM r-base:4.3.2 AS base
 # Build base
 
 ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
     ## Install python 3 and system dependencies
         && apt-get install -y --no-install-recommends build-essential procps libpq-dev python3.8 python3-pip python3-setuptools python3-dev python3.11-venv \
-        && apt-get install wget tar \
     ## Install bed tools
         && apt-get install bedtools \
     ## Move python usr library
@@ -34,6 +34,7 @@ RUN apt-get update \
             numpy \
             scipy \
             pandas
+
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
 
