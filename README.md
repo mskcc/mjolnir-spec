@@ -1,4 +1,4 @@
-# mjolnir-spec
+# mjolnir
 
 CI utility container
 
